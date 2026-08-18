@@ -1,0 +1,383 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>jeremias 29:11</title>  
+ 
+    <style> 
+        body { 
+            margin: 0; 
+            font-family: Georgia, "Times New Roman", serif; 
+            background: #eee8d8; 
+            color: #2d281f; 
+        } 
+ 
+        .blog { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: white; 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15); 
+        } 
+ 
+        .cabecera { 
+            background: #29231b; 
+            color: white; 
+            text-align: center; 
+            padding: 45px 20px; 
+            border-bottom: 5px solid #c7a84b; 
+        } 
+ 
+        .cabecera h2 { 
+            color: #e0c467; 
+            font-size: 38px; 
+            letter-spacing: 3px; 
+            margin: 0; 
+        } 
+ 
+        .contenido { 
+            padding: 45px; 
+        } 
+ 
+        .introduccion { 
+            border-left: 5px solid #c7a84b; 
+            background: #f8f4e8; 
+            padding: 25px; 
+            margin-bottom: 35px; 
+        } 
+ 
+        .introduccion h4 { 
+            margin-top: 0; 
+            color: #8a6d28; 
+            font-size: 23px; 
+        } 
+ 
+        p { 
+            font-size: 18px; 
+            line-height: 1.8; 
+            text-align: justify; 
+        } 
+ 
+        .versiculo-principal { 
+            background: #29231b; 
+            color: white; 
+            padding: 35px; 
+            margin: 35px 0; 
+            text-align: center; 
+            border-top: 4px solid #c7a84b; 
+            border-bottom: 4px solid #c7a84b; 
+        } 
+ 
+        .versiculo-principal h2 { 
+            color: #e0c467; 
+            font-size: 32px; 
+        } 
+ 
+        .versiculo-principal p { 
+            text-align: center; 
+            font-size: 22px; 
+            font-style: italic; 
+        } 
+ 
+        .seccion { 
+            margin-top: 40px; 
+        } 
+ 
+        .seccion > h3 { 
+            color: #8a6d28; 
+            font-size: 27px; 
+            border-bottom: 2px solid #d9c88f; 
+            padding-bottom: 10px; 
+        } 
+ 
+        .versiculo { 
+            background: #faf8f0; 
+            margin: 25px 0; 
+            padding: 20px 25px; 
+            border-left: 4px solid #c7a84b; 
+        } 
+ 
+        .versiculo h4 { 
+            color: #6f5723; 
+            margin-top: 0; 
+            font-size: 20px; 
+        } 
+ 
+        .pie { 
+            background: #29231b; 
+            color: #ddd; 
+            text-align: center; 
+            padding: 25px; 
+            margin-top: 30px; 
+        } 
+ 
+        .pie p { 
+            text-align: center; 
+            margin: 0; 
+            font-size: 14px; 
+        } 
+ 
+        @media (max-width: 700px) { 
+            .contenido { 
+                padding: 25px; 
+            } 
+ 
+            .cabecera h2 { 
+                font-size: 28px; 
+            } 
+ 
+            p { 
+                font-size: 16px; 
+            } 
+ 
+            .versiculo-principal p { 
+                font-size: 18px; 
+            } 
+        }
+
+        .imagen-blog {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin: 25px 0;
+            border-radius: 8px;
+            border: 2px solid #d9c88f;
+        }
+
+        .reflexion {
+            background: #29231b;
+            color: white;
+            margin-top: 45px;
+            padding: 35px;
+            border-top: 5px solid #c7a84b;
+            border-bottom: 5px solid #c7a84b;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .reflexion h2 {
+            color: #e0c467;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .reflexion h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #c7a84b;
+            margin: 12px auto;
+        }
+
+        .reflexion p {
+            color: #f4f0e6;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .oracion {
+            background: #f8f4e8;
+            margin-top: 45px;
+            padding: 35px;
+            border-left: 5px solid #c7a84b;
+            border-right: 1px solid #d9c88f;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .oracion h2 {
+            color: #8a6d28;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .oracion h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #c7a84b;
+            margin: 12px auto;
+        }
+
+        .oracion p {
+            color: #3b3428;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        @media (max-width: 700px) {
+            .imagen-blog {
+                height: 230px;
+            }
+
+            .reflexion,
+            .oracion {
+                padding: 25px;
+            }
+
+            .reflexion h2,
+            .oracion h2 {
+                font-size: 26px;
+            }
+        }
+    </style> 
+</head>  
+ 
+<body>  
+ 
+<div class="blog"> 
+ 
+    <div class="cabecera"> 
+        <h2>LECTURA BIBLICA</h2> 
+    </div> 
+ 
+    <div class="contenido"> 
+ 
+        <div class="introduccion"> 
+            <h4>introducción</h4> 
+            <p>El siguiente versiculo que estas apunto de conocer fue sacado de la biblia con el fin  
+                de que puedas responder esta pregunta ¿Tu sabes los planes que Dios tiene para ti?.  
+                A menudo nos preguntamos por que nos pasa todo lo malo cuando nada nos sale bien, pues   
+                de esto trata este versiculo de hacernos entender todo lo que puede llegar a pasar   
+                y siempre confiar en lo que Dios tiene preparado para nosotros sin mas que decir empezemos.  
+            </p> 
+        </div> 
+ 
+        <div class="versiculo-principal"> 
+            <img src="" alt=""> 
+            <h2>JEREMIAS 29:11</h2>  
+            <P>"Yo se los planes que tengo para ustedes declara el señor  
+                planes de bienestar y no de calamidad para darles un futuro   
+                y una esperanza."  
+            </P>  
+        </div> 
+ 
+        <div class="seccion"> 
+            <h3>JEREMIAS 29:8-10</h3>  
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:8</h4>  
+                <p>  
+                    Por que asi ha dicho jehová de los ejércitos, Dios de Israel:  
+                    no os engañen vuestros profetas que están entre vosotros ni vuestros   
+                    adivinos; ni atendáis a vuestros sueños que soñais  
+                </p> 
+            </div> 
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:9</h4>  
+                <p>  
+                    Por que falsamente os profetizan ellos en mi nombre; no los envié,  
+                    ha dicho jehová.  
+                </p> 
+            </div> 
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:10</h4>  
+                <p>  
+                    por que así dijo jehová: Cuando en Babilonia se cumplieron los setenta  
+                    años yo os visitaré, y despertaré sobre vosotros mi buena palabra,   
+                    para tornaros a este lugar.  
+                </p> 
+            </div> 
+        </div> 
+ 
+        <div class="seccion"> 
+            <h3>JEREMIAS 29:12-14</h3>  
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:12</h4> 
+                <p>  
+                    Entonces me invocaréis, y vendréis y oraréis a mí, y yo os oiré.  
+                </p> 
+            </div> 
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:13</h4> 
+                <p>  
+                    Entonces me invocaréis, y vendréis y oraréis a mí, y yo os oiré.  
+                </p> 
+            </div> 
+ 
+            <div class="versiculo"> 
+                <h4>JEREMIAS 29:14</h4> 
+                <p>  
+                    Y seré hallado por vosotros, dice Jehová; y haré volver vuestra cautividad,  
+                    y os reuniré de todas las naciones y de todos los lugares adonde os arrojé,   
+                    dice Jehová; y os haré volver al lugar de donde os hice llevar.  
+                </p> 
+            </div> 
+        </div>
+
+
+        <div class="reflexion">
+
+            <img class="imagen-blog" src="" alt="">
+
+            <h2>REFLEXIÓN</h2>
+
+            <p>
+                Este versiculo no promete una vida sin problemas promete un proposito que no falla
+                Dios no dice que todo sera facil dice que todo tendra sentido muchas veces queremos
+                el resultado del proceso la promesa sin la espera pero Dios trabja en etapa tal vez hoy
+                estas atravezando una temporada que no entiendes un retraso que te frustra o un cambio
+                que no pediste pero no es abandono es formacion dios no esta improvisando con tu vida
+                el esta esperando algo que tu no puedes ver ahora no comprendas ya vio tu mañana
+                confia por que el mismo Dios que prometio un futuro tambien esta cuidando cada paso
+                del camino si hoy sientes que todo se movio recuerda que Dios no pierde el control ni
+                se equivoca en sus deciciones es una alineacion divina el sabe como y cuando debe llevarte
+                no te sueltes de tu fe sigue confiando incluso cuando no lo entiendas Dios sigue escribiendo
+                tu historia con amor y proposito eterno.
+            </p>
+
+        </div>
+
+
+        <div class="oracion">
+
+            <img class="imagen-blog" src="" alt="">
+
+            <h2>ORACIÓN DEL DÍA</h2>
+
+            <p>
+                Querido Dios doy gracias por vivir un dia mas por estar sano yo y mis seres queridos
+                vengo a ti a pedir que cumplas tu voluntad en este dia te quiero pedir que cuides a mis
+                seres queridos y a mis semejantes y que no nos falte el pan de cada dia.
+            </p>
+
+            <p>
+                quiero pedirte perdon por los pecados que cometi perdoname a mi y a mis semejantes
+                que solo tu puedes perdonar nuestros pecados pido perdon por todo lo malo que hize
+                con mis semejantes.
+            </p>
+
+            <p>
+                pido ayuda a ti para darme sabiduria y no dejar que me pase algo ya que solo tu
+                puedes brindarme esa poteccion.
+            </p>
+
+            <p>
+                te doy gracias por un dia mas de vida amen.
+            </p>
+
+        </div>
+ 
+    </div> 
+     
+ 
+    <div class="pie"> 
+        <p>  
+            Blog de Lectura Bíblica • Jeremías 29:11 <br>@carlos Derechos reservados 
+        </p> 
+    </div> 
+ 
+</div> 
+ 
+</body>  
+</html>
